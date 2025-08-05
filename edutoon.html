@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EDUTOON - Learning Made Magical</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #FDF6EC, #E6F7FF);
+      color: #333;
+    }
+    header {
+      background-color: #00AEEF;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 5px;
+    }
+    .tagline {
+      font-style: italic;
+      font-size: 1.2em;
+    }
+    .container {
+      padding: 40px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .feature-box {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin: 20px 0;
+      padding: 20px;
+      transition: transform 0.3s ease;
+      text-decoration: none;
+      display: block;
+    }
+    .feature-box:hover {
+      transform: scale(1.03);
+      background-color: #f5faff;
+    }
+    .feature-title {
+      font-size: 1.3em;
+      color: #00AEEF;
+    }
+    button {
+      background-color: #FFC107;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1em;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    button:hover {
+      background-color: #ff9800;
+    }
+    .animation {
+      width: 100px;
+      margin: auto;
+      animation: bounce 2s infinite;
+      font-size: 2em;
+      text-align: center;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>EDUTOON</h1>
+    <p class="tagline">Where animated mentors make learning fun!</p>
+  </header>
+
+  <div class="container">
+    <div class="animation">
+      🎓
+    </div>
+
+    <a href="lessons.html" class="feature-box">
+      <h2 class="feature-title">📚 Interactive Lessons</h2>
+      <p>Engaging animated topics that simplify complex subjects for students aged 7–16.</p>
+    </a>
+
+    <a href="ai-mentor.html" class="feature-box">
+      <h2 class="feature-title">🤖 AI Mentor Guidance</h2>
+      <p>A built-in AI character adapts to each child’s learning style and answers questions in real time.</p>
+    </a>
+
+    <a href="parent-dashboard.html" class="feature-box">
+      <h2 class="feature-title">👪 Parent Dashboard</h2>
+      <p>Track progress, see achievements, and support your child's education through real-time insights.</p>
+    </a>
+
+    <button onclick="location.href='demo.html'">Explore App Demo</button>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EDUTOON AI Mentor</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f8fc;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      background-color: #00AEEF;
+      color: white;
+      width: 100%;
+      padding: 2rem 1rem 1rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    .mentor-container {
+      margin: 2rem 0 1rem;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .mentor-container iframe {
+      border: none;
+      width: 300px;
+      height: 300px;
+      border-radius: 20px;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .prompt {
+      max-width: 600px;
+      padding: 1rem;
+      font-size: 1.2rem;
+      color: #555;
+    }
+
+    input, button {
+      padding: 0.8rem;
+      margin: 0.5rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      width: 80%;
+      max-width: 400px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background-color: #FFC107;
+      color: white;
+      cursor: pointer;
+      border: none;
+    }
+
+    button:hover {
+      background-color: #FF9800;
+    }
+
+    #response {
+      margin-top: 2rem;
+      background: #e0f7ff;
+      padding: 1rem;
+      border-radius: 10px;
+      max-width: 600px;
+      width: 90%;
+      font-size: 1.1rem;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>EDUTOON AI Mentor</h1>
+    <p>Ask questions by typing or using your voice!</p>
+  </header>
+
+  <div class="mentor-container">
+    <!-- Replace this iframe with your own 3D cartoon model -->
+    <iframe src="https://my.spline.design/untitled-itjIbhgwHeJtzRzfLjuH2BrT/" title="Mentor 3D Model"></iframe>
+  </div>
+
+  <div class="prompt">
+    <p>Ask me about science, math, or stories. I’m always here to guide you!</p>
+  </div>
+
+  <button onclick="startVoiceRecognition()">🎙️ Speak to Mentor</button>
+  <br/>
+  <input type="text" id="userInput" placeholder="Type your question here..." />
+  <button onclick="getResponse()">Ask Mentor</button>
+
+  <div id="response"></div>
+
+  <script>
+    function getResponse() {
+      const input = document.getElementById('userInput').value.toLowerCase();
+      let answer = "Let’s explore that together!";
+
+      if (input.includes("photosynthesis")) {
+        answer = "Photosynthesis is how plants use sunlight, water, and carbon dioxide to make food.";
+      } else if (input.includes("gravity")) {
+        answer = "Gravity is a force that pulls objects toward each other—like how Earth pulls us down!";
+      } else if (input.includes("area of triangle")) {
+        answer = "Use the formula: (base × height) ÷ 2 to find the area of a triangle.";
+      }
+
+      document.getElementById('response').innerText = answer;
+    }
+
+    // Voice recognition setup
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    const recognition = new SpeechRecognition();
+    recognition.lang = 'en-US';
+    recognition.interimResults = false;
+
+    function startVoiceRecognition() {
+      recognition.start();
+      recognition.onresult = function(event) {
+        const voiceInput = event.results[0][0].transcript;
+        document.getElementById('userInput').value = voiceInput;
+        getResponse();
+      };
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EDUTOON Parent Dashboard</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #F4F9FF;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+    header {
+      background-color: #00AEEF;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      margin: 0;
+    }
+    .dashboard {
+      max-width: 1000px;
+      margin: 40px auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.02);
+    }
+    .card h2 {
+      color: #00AEEF;
+      margin-bottom: 10px;
+    }
+    .progress-bar {
+      background: #e0e0e0;
+      border-radius: 10px;
+      overflow: hidden;
+      height: 20px;
+      margin-top: 10px;
+    }
+    .progress {
+      height: 100%;
+      background: #00AEEF;
+      width: 70%;
+      transition: width 0.5s ease;
+    }
+    .btn {
+      background-color: #FFC107;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+    .btn:hover {
+      background-color: #ff9800;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>👪 EDUTOON Parent Dashboard</h1>
+    <p>Track your child's learning journey in real time</p>
+  </header>
+
+  <div class="dashboard">
+
+    <div class="card">
+      <h2>📊 Learning Progress</h2>
+      <p>Math: 70% complete</p>
+      <div class="progress-bar"><div class="progress" style="width: 70%;"></div></div>
+      <p>Science: 50% complete</p>
+      <div class="progress-bar"><div class="progress" style="width: 50%; background:#4CAF50;"></div></div>
+    </div>
+
+    <div class="card">
+      <h2>⏱️ Screen Time</h2>
+      <p>Today: 1h 45m</p>
+      <p>Weekly Average: 2h/day</p>
+      <button class="btn" onclick="alert('Screen time limit updated!')">Set Time Limit</button>
+    </div>
+
+    <div class="card">
+      <h2>🎯 Goals & Rewards</h2>
+      <p>Current Goal: Complete 5 lessons</p>
+      <p>Reward: Unlock new mentor skin</p>
+      <button class="btn" onclick="alert('Goal updated!')">Update Goal</button>
+    </div>
+
+    <div class="card">
+      <h2>📅 Activity Log</h2>
+      <ul>
+        <li>✔️ Completed "Photosynthesis" quiz</li>
+        <li>✔️ Watched "Gravity Explained" animation</li>
+        <li>❌ Skipped "Area of Triangle" lesson</li>
+      </ul>
+    </div>
+
+  </div>
+
+</body>
+</html>

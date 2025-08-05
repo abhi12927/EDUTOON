@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EDUTOON Demo</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: linear-gradient(to right, #e0f7fa, #fef9e7);
+      color: #333;
+    }
+    header {
+      text-align: center;
+      padding: 40px 20px 20px;
+      background-color: #00AEEF;
+      color: white;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    .intro {
+      max-width: 900px;
+      margin: auto;
+      padding: 30px;
+      text-align: center;
+    }
+    .intro p {
+      font-size: 1.2em;
+      color: #555;
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .feature-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      transition: transform 0.3s ease;
+    }
+    .feature-card:hover {
+      transform: scale(1.02);
+    }
+    .feature-card h2 {
+      color: #00AEEF;
+      margin-bottom: 10px;
+    }
+    .mentor-preview {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .mentor-img {
+      width: 150px;
+      animation: float 2s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    .cta {
+      text-align: center;
+      margin: 50px auto 30px;
+    }
+    .cta button {
+      background-color: #FFC107;
+      color: #fff;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .cta button:hover {
+      background-color: #ff9800;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Explore EDUTOON</h1>
+    <p>See how we make learning magical</p>
+  </header>
+
+  <section class="intro">
+    <p>EDUTOON transforms education by combining animated visuals with AI-driven guidance. Whether it’s solving tricky math problems or exploring science through storytelling, our app makes learning feel like an adventure.</p>
+  </section>
+
+  <section class="features">
+    <div class="feature-card">
+      <h2>📺 Animated Learning</h2>
+      <p>Interactive videos simplify complex subjects and spark curiosity across all age levels.</p>
+    </div>
+    <div class="feature-card">
+      <h2>🤖 AI Mentor</h2>
+      <p>Meet your digital guide who adapts to each student’s learning style and answers questions live.</p>
+    </div>
+    <div class="feature-card">
+      <h2>🎮 Gamified Quizzes</h2>
+      <p>Kids earn points and unlock rewards while reinforcing key concepts through playful assessments.</p>
+    </div>
+    <div class="feature-card">
+      <h2>👪 Parent Insights</h2>
+      <p>Real-time progress tracking, screen time overview, and personalized goal setting tools.</p>
+    </div>
+  </section>
+
+  <section class="mentor-preview">
+    <img src="https://via.placeholder.com/150?text=Mentor" alt="Animated Mentor Preview" class="mentor-img" />
+    <p><em>“Hi there! I’m your learning companion—ready to turn confusion into curiosity.”</em></p>
+  </section>
+
+  <section class="cta">
+    <button onclick="alert('Thanks for exploring! Full demo experience coming soon 🎉')">Start Demo</button>
+  </section>
+
+</body>
+</html>
